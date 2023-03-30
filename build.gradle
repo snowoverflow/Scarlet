@@ -4,9 +4,9 @@ buildscript {
     ext.kotlin_version = '1.5.30'
     ext.dokka_version = '0.9.16'
     repositories {
-        mavenCentral()
         google()
-        jcenter()
+        //mavenCentral仓和jcenter仓的聚合仓 阿里云镜像(老)
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
     dependencies {
         classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
@@ -28,9 +28,9 @@ allprojects {
     version = VERSION_NAME
 
     repositories {
-        mavenCentral()
         google()
-        jcenter()
+        //mavenCentral仓和jcenter仓的聚合仓 阿里云镜像(老)
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
 }
 
